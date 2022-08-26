@@ -667,7 +667,7 @@ act_gen() {
     files_script
   fi
 
-  #source <(curl -sL https://raw.githubusercontent.com/ChumoGH/ChumoGH-Script/master/Key-gerar/insta.sh)
+  #source <(curl -sL https://raw.githubusercontent.com/heshan3031/Bot-Gen-MultiScript/main/ChumoGH/cgh.sh)
 }
 
 files_script() {
@@ -722,7 +722,7 @@ bot_menu() {
   ) && echo -e "\033[1;32m [OK]" || echo -e "\033[1;31m [FAIL]"
   rm -rf /etc/ADM-db
   CIDdir=/etc/ADM-db && [[ ! -d ${CIDdir} ]] && mkdir ${CIDdir}
-  [[ ! -e "${CIDdir}/confbot.sh" ]] && wget --no-check-certificate -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/NetVPS/Bot-Gen-MultiScript/main/ChumoGH/Files-BOT.Open/Varios/confbot-t.sh &>/dev/null && chmod +x ${CIDdir}/confbot.sh
+  [[ ! -e "${CIDdir}/confbot.sh" ]] && wget --no-check-certificate -O ${CIDdir}/confbot.sh https://raw.githubusercontent.com/heshan3031/Bot-Gen-MultiScript/main/ChumoGH/Files-BOT.Open/Varios/confbot-t.sh &>/dev/null && chmod +x ${CIDdir}/confbot.sh
   sed -i -e 's/\r$//' ${CIDdir}/confbot.sh
   source ${CIDdir}/confbot.sh
   bot_conf
