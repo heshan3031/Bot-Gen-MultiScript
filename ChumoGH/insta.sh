@@ -163,19 +163,19 @@ unset keybot
 #github="https://raw.githubusercontent.com"
 echo -e "\033[7;49;35m    =====>>►► 🐲 GEN ChumoGH💥VPS 🐲 ◄◄<<=====      \033[0m"
 msg -bar
-# [[ "$(echo "$(cat < /etc/nivbot)")" < "3" ]] && {
-# [[ -e /bin/downloadbot ]] && {
-# [[ -z $(cat < /bin/downloadbot) ]] && read -p " Ingresa tu Key de Autorizacion : " keybot || unset keybot
-# } 
-# } || read -p " Key de Autorizacion : " keybot 
-# [[ -z $keybot ]] && {
-# [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
-# [[ $link = 'https://raw.githubusercontent.com' ]] && echo "CONTROL MEDIANTE GitHub" || echo "CONTROL EXTERNO"
-# permited=$(curl -sSL "${link}/NetVPS/Bot-Gen-MultiScript/main/Control-IP") 
-# } || {
-# permited=$(curl -sSL "$(ofus $keybot)/NetVPS/Bot-Gen-MultiScript/main/Control-IP")
-# [[ -z $keybot ]] && echo $link > /bin/downloadbot  || echo -e "$(ofus $keybot)" > /bin/downloadbot 
-# }
+ [[ "$(echo "$(cat < /etc/nivbot)")" < "3" ]] && {
+ [[ -e /bin/downloadbot ]] && {
+ [[ -z $(cat < /bin/downloadbot) ]] && read -p " Ingresa tu Key de Autorizacion : " keybot || unset keybot
+ } 
+ } || read -p " Key de Autorizacion : " keybot 
+ [[ -z $keybot ]] && {
+ [[ -e /bin/downloadbot ]] && link="$(cat < /bin/downloadbot)" || link='https://raw.githubusercontent.com'
+ [[ $link = 'https://raw.githubusercontent.com' ]] && echo "CONTROL MEDIANTE GitHub" || echo "CONTROL EXTERNO"
+ permited=$(curl -sSL "${link}/NetVPS/Bot-Gen-MultiScript/main/Control-IP") 
+ } || {
+ permited=$(curl -sSL "$(ofus $keybot)/NetVPS/Bot-Gen-MultiScript/main/Control-IP")
+ [[ -z $keybot ]] && echo $link > /bin/downloadbot  || echo -e "$(ofus $keybot)" > /bin/downloadbot 
+ }
 permited=$(curl -sSL "https://github.com/heshan3031/VPSbot/blob/main/Control-IP") 
  [[ $(echo $permited|grep "${IP}") = "" ]] && {
   clear
