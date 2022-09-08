@@ -41,14 +41,14 @@ check_ip(){
 }
 
 function_verify () {
-  permited=$(curl -sSL "https://raw.githubusercontent.com/heshan3031/VPSbot/main/Control-IP")
+  permited=$(curl -sSL "https://raw.githubusercontent.com/rudi9999/Control/master/Control-Bot")
   if [[ $(echo $permited|grep -w "$IP") = "" ]]; then
   	clear
   	msg -bar
   	print_center -ama "¡LA IP $(wget -qO- ipv4.icanhazip.com) NO ESTA AUTORIZADA!"
   	print_center -ama "SI DESEAS USAR EL BOTGEN CONTACTE A @Rufu99"
   	msg -bar
-  	[[ -d /etc/ADM-db ]] && rm -rf /etc/ADM-db
+  	#[[ -d /etc/ADM-db ]] && rm -rf /etc/ADM-db
   	exit
   fi
 }
@@ -838,7 +838,7 @@ install_ini(){
 
 bot_conf(){
 	check_ip
-	function_verify
+	#function_verify
 	install_ini
 	echo 'ok' > ${CIDdir}/init
 }
